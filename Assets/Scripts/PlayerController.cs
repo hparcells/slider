@@ -32,6 +32,7 @@ public class PlayerController : MonoBehaviour {
         if(collision.gameObject.tag == "Portal") {
             canMove = false;
             playerRb2d.isKinematic = true;
+            playerRb2d.velocity = new Vector2(0, 0);
 
             if(Application.CanStreamedLevelBeLoaded("Level" + ++currentLevel)) {
                 Initiate.Fade("Level" + currentLevel, Color.white, 5);
@@ -40,6 +41,8 @@ public class PlayerController : MonoBehaviour {
             }
 
             // TODO: Play sound.
+        }else if(collision.gameObject.tag == "Jump Block") {
+            playerRb2d.velocity = new Vector2(playerRb2d.velocity.y, 10);
         }
     }
 
