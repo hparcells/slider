@@ -6,6 +6,9 @@ TagManager:
   tags:
   - Portal
   - Jump Block
+  - Platform
+  - Enemy
+  - Enemy Bounce
   layers:
   - Default
   - TransparentFX

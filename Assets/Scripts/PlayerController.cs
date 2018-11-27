@@ -29,6 +29,9 @@ public class PlayerController : MonoBehaviour {
     }
 
     void OnCollisionEnter2D(Collision2D collision) {
+        Collider2D collider = collision.collider;
+
+        // Portal collision.
         if(collision.gameObject.tag == "Portal") {
             canMove = false;
             playerRb2d.isKinematic = true;
@@ -41,8 +44,16 @@ public class PlayerController : MonoBehaviour {
             }
 
             // TODO: Play sound.
-        }else if(collision.gameObject.tag == "Jump Block") {
+        }
+
+        // Jump block action.
+        if(collision.gameObject.tag == "Jump Block") {
             playerRb2d.velocity = new Vector2(playerRb2d.velocity.y, 10);
+        }
+
+        // Death from enemy.
+        if(collision.gameObject.tag == "Enemy") {
+            Destroy(gameObject);
         }
     }
 
