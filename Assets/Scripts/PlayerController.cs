@@ -33,9 +33,7 @@ public class PlayerController : MonoBehaviour {
 
         // Portal collision.
         if(collision.gameObject.tag == "Portal") {
-            canMove = false;
-            playerRb2d.isKinematic = true;
-            playerRb2d.velocity = new Vector2(0, 0);
+            freeze();
 
             if(Application.CanStreamedLevelBeLoaded("Level" + ++currentLevel)) {
                 Initiate.Fade("Level" + currentLevel, Color.white, 5);
@@ -62,9 +60,15 @@ public class PlayerController : MonoBehaviour {
         resetLevel();
     }
 
-    public void resetLevel() {
+    private void resetLevel() {
         Initiate.Fade(SceneManager.GetActiveScene().name, Color.red, 5);
 
         // TODO: Play sound.
+    }
+
+    private void freeze() {
+        canMove = false;
+        playerRb2d.isKinematic = true;
+        playerRb2d.velocity = new Vector2(0, 0);
     }
 }

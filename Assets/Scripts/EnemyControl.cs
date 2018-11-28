@@ -29,6 +29,11 @@ public class EnemyControl : MonoBehaviour {
         if(collision.gameObject.tag == "Jump Block") {
             enemyRb2d.velocity = new Vector2(enemyRb2d.velocity.y, 10);
         }
+
+        // Go away.
+        if(collision.gameObject.name == "Portal") {
+            Destroy(gameObject);
+        }
     }
 
     // Destory when off screen.
