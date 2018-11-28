@@ -39,6 +39,7 @@ public class PlayerController : MonoBehaviour {
                 Initiate.Fade("Level" + currentLevel, Color.white, 5);
             }else {
                 // TODO: Go to menu.
+                Initiate.Fade("Level1", Color.white, 5);
             }
 
             // TODO: Play sound.
