@@ -4,6 +4,9 @@ using UnityEngine.SceneManagement;
 public class PlayerController : MonoBehaviour {
     public Rigidbody2D playerRb2d;
     public float playerMoveSpeed;
+    public AudioSource portalSound;
+    public AudioSource deathSound;
+    public AudioSource jumpSound;
 
     public static int currentLevel = 1;
     public static int deaths = 0;
@@ -33,6 +36,7 @@ public class PlayerController : MonoBehaviour {
 
         // Portal collision.
         if(collision.gameObject.tag == "Portal") {
+            portalSound.Play();
             freeze();
 
             if(Application.CanStreamedLevelBeLoaded("Level" + ++currentLevel)) {
@@ -47,11 +51,13 @@ public class PlayerController : MonoBehaviour {
 
         // Jump block action.
         if(collision.gameObject.tag == "Jump Block") {
+            jumpSound.Play();
             playerRb2d.velocity = new Vector2(playerRb2d.velocity.y, 10);
         }
 
         // Death from enemy.
         if(collision.gameObject.tag == "Enemy") {
+            deathSound.Play();
             Destroy(gameObject);
         }
     }

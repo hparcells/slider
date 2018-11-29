@@ -37,7 +37,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1769804353288020}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -5.945, y: 4.269, z: 0}
+  m_LocalPosition: {x: -7.27, y: -3.547, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -86,7 +86,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 1, y: 1}
+  m_Size: {x: 0.97, y: 1}
   m_EdgeRadius: 0
 --- !u!114 &114246944223372938
 MonoBehaviour:
@@ -101,6 +101,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   playerRb2d: {fileID: 50612035342741196}
   playerMoveSpeed: 10
+  portalSound: {fileID: 0}
 --- !u!212 &212440360928067508
 SpriteRenderer:
   m_ObjectHideFlags: 1

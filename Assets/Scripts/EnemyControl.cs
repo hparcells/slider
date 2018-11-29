@@ -2,6 +2,7 @@
 
 public class EnemyControl : MonoBehaviour {
     public Rigidbody2D enemyRb2d;
+    public AudioSource jumpSound;
 
     private float floatHeight = 16;
 
@@ -26,7 +27,8 @@ public class EnemyControl : MonoBehaviour {
         }
 
         // Jump block action.
-        if(collision.gameObject.tag == "Jump Block") {
+        if(collision.gameObject.tag == "Jump Block") {jumpSound.Play();
+            jumpSound.Play();
             enemyRb2d.velocity = new Vector2(enemyRb2d.velocity.y, 10);
         }
 
