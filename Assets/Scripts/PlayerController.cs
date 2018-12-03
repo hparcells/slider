@@ -42,11 +42,9 @@ public class PlayerController : MonoBehaviour {
             if(Application.CanStreamedLevelBeLoaded("Level" + ++currentLevel)) {
                 Initiate.Fade("Level" + currentLevel, Color.white, 5);
             }else {
-                // TODO: Go to menu.
-                Initiate.Fade("Level1", Color.white, 5);
+                currentLevel = 1;
+                Initiate.Fade("Menu", Color.white, 5);
             }
-
-            // TODO: Play sound.
         }
 
         // Jump block action.
@@ -65,12 +63,11 @@ public class PlayerController : MonoBehaviour {
     void OnBecameInvisible() {
         deaths++;
         resetLevel();
+        deathSound.Play();
     }
 
     private void resetLevel() {
         Initiate.Fade(SceneManager.GetActiveScene().name, Color.red, 5);
-
-        // TODO: Play sound.
     }
 
     private void freeze() {

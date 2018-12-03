@@ -102,6 +102,8 @@ MonoBehaviour:
   playerRb2d: {fileID: 50612035342741196}
   playerMoveSpeed: 10
   portalSound: {fileID: 0}
+  deathSound: {fileID: 0}
+  jumpSound: {fileID: 0}
 --- !u!212 &212440360928067508
 SpriteRenderer:
   m_ObjectHideFlags: 1

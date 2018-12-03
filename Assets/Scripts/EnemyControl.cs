@@ -4,8 +4,6 @@ public class EnemyControl : MonoBehaviour {
     public Rigidbody2D enemyRb2d;
     public AudioSource jumpSound;
 
-    private float floatHeight = 16;
-
     private int move = -1;
 
     private void Start() {

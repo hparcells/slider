@@ -1057,6 +1057,11 @@ Prefab:
       propertyPath: m_RootOrder
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 114490808435273276, guid: c1cd86d7a4b1d6e45b937dd281f1c746,
+        type: 2}
+      propertyPath: jumpSound
+      value: 
+      objectReference: {fileID: 675116019}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: c1cd86d7a4b1d6e45b937dd281f1c746, type: 2}
   m_IsPrefabParent: 0
