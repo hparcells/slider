@@ -13,6 +13,7 @@ public class PlayerController : MonoBehaviour {
 
     private float move;
     private bool canMove;
+    public bool hasKey = false;
 
     void Start () {
         playerRb2d = GetComponent<Rigidbody2D>();
@@ -41,10 +42,30 @@ public class PlayerController : MonoBehaviour {
 
             if(Application.CanStreamedLevelBeLoaded("Level" + ++currentLevel)) {
                 Initiate.Fade("Level" + currentLevel, Color.white, 5);
-            }else {
+            } else {
                 currentLevel = 1;
                 Initiate.Fade("Menu", Color.white, 5);
             }
+        }
+
+        // Locked Portal collision.
+        if(collision.gameObject.name == "Locked Portal" && hasKey) {
+            portalSound.Play();
+            freeze();
+
+            if(Application.CanStreamedLevelBeLoaded("Level" + ++currentLevel)) {
+                Initiate.Fade("Level" + currentLevel, Color.white, 5);
+            } else {
+                currentLevel = 1;
+                Initiate.Fade("Menu", Color.white, 5);
+            }
+        }
+
+        // Key collision
+        if(collision.gameObject.name == "Key") {
+            collision.collider.enabled = false;
+            collision.gameObject.transform.parent = gameObject.transform;
+            hasKey = true;
         }
 
         // Jump block action.
