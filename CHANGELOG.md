@@ -7,7 +7,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 # 0.3.0 [12/7/2018]
 ## Additions
 - Keys and Locked Portals which require keys to open.
-- Moveable cubes.
+- Movable cubes.
 - Force reset. Press left and right at same time.
 - Ending screen, displaying death count.
 - My own spash screen.
