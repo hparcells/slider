@@ -596,6 +596,16 @@ Prefab:
       propertyPath: m_Name
       value: Emeny (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 114490808435273276, guid: c1cd86d7a4b1d6e45b937dd281f1c746,
+        type: 2}
+      propertyPath: enemyRb2d
+      value: 
+      objectReference: {fileID: 2096872311}
+    - target: {fileID: 114490808435273276, guid: c1cd86d7a4b1d6e45b937dd281f1c746,
+        type: 2}
+      propertyPath: jumpSound
+      value: 
+      objectReference: {fileID: 675116019}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: c1cd86d7a4b1d6e45b937dd281f1c746, type: 2}
   m_IsPrefabParent: 0
@@ -1233,3 +1243,8 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!50 &2096872311 stripped
+Rigidbody2D:
+  m_PrefabParentObject: {fileID: 50171801565161428, guid: c1cd86d7a4b1d6e45b937dd281f1c746,
+    type: 2}
+  m_PrefabInternal: {fileID: 712550459}

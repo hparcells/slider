@@ -13,7 +13,7 @@ public class PlayerController : MonoBehaviour {
 
     private float move;
     private bool canMove;
-    public bool hasKey = false;
+    private bool hasKey = false;
 
     void Start () {
         playerRb2d = GetComponent<Rigidbody2D>();
@@ -50,7 +50,7 @@ public class PlayerController : MonoBehaviour {
                 Initiate.Fade("Level" + currentLevel, Color.white, 5);
             } else {
                 currentLevel = 1;
-                Initiate.Fade("Menu", Color.white, 5);
+                Initiate.Fade("Ending", Color.white, 5);
             }
         }
 
@@ -63,7 +63,7 @@ public class PlayerController : MonoBehaviour {
                 Initiate.Fade("Level" + currentLevel, Color.white, 5);
             } else {
                 currentLevel = 1;
-                Initiate.Fade("Menu", Color.white, 5);
+                Initiate.Fade("Ending", Color.white, 5);
             }
         }
 

@@ -1,14 +1,22 @@
 ﻿using UnityEngine;
+using UnityEngine.UI;
 
-public class MenuScript : MonoBehaviour {
+public class EndingScript : MonoBehaviour {
+    public Text deathText;
     public AudioSource selectSound;
+
     private bool shouldDoAction = true;
 
-    void FixedUpdate () {
+    void Start () {
+        deathText.text = "Deaths: " + PlayerController.deaths;
+	}
+
+    void FixedUpdate() {
         if(shouldDoAction) {
             if(Input.GetKey(KeyCode.RightArrow)) {
                 selectSound.Play();
-                Initiate.Fade("Level1", Color.white, 2);
+                PlayerController.deaths = 0;
+                Initiate.Fade("Menu", Color.white, 2);
                 shouldDoAction = false;
             }
 

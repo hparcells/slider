@@ -1,6 +1,6 @@
 ﻿using UnityEngine;
 
-public class EnemyControl : MonoBehaviour {
+public class EnemyController : MonoBehaviour {
     public Rigidbody2D enemyRb2d;
     public AudioSource jumpSound;
 
