@@ -30,6 +30,12 @@ public class PlayerController : MonoBehaviour {
             move = Input.GetAxis("Horizontal");
             playerRb2d.velocity = new Vector2(move * playerMoveSpeed, playerRb2d.velocity.y);
         }
+
+        // Force reset.
+        if(Input.GetKey(KeyCode.LeftArrow) && Input.GetKey(KeyCode.RightArrow)) {
+            deathSound.Play();
+            Destroy(gameObject);
+        }
     }
 
     void OnCollisionEnter2D(Collision2D collision) {

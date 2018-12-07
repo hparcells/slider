@@ -4,6 +4,12 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+# Unreleased [12/7/2018]
+## Additions
+- Keys and Locked Portals which require keys to open.
+- Moveable cubes.
+- Force reset. Press left and right at same time.
+
 # 0.2.0 [12/03/2018]
 ## Additions
 - A menu finally.
