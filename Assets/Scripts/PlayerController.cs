@@ -7,6 +7,7 @@ public class PlayerController : MonoBehaviour {
     public AudioSource portalSound;
     public AudioSource deathSound;
     public AudioSource jumpSound;
+    public AudioSource keySound;
 
     public static int currentLevel = 1;
     public static int deaths = 0;
@@ -71,6 +72,7 @@ public class PlayerController : MonoBehaviour {
         if(collision.gameObject.name == "Key") {
             collision.collider.enabled = false;
             collision.gameObject.transform.parent = gameObject.transform;
+            keySound.Play();
             hasKey = true;
         }
 

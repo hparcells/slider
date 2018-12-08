@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class BoxScript : MonoBehaviour {
     public Rigidbody2D cubeRb2d;
+    public AudioSource jumpSound;
 
     void OnBecameInvisible() {
         Destroy(gameObject);
@@ -17,6 +18,7 @@ public class BoxScript : MonoBehaviour {
 
         // Jump block action.
         if(collision.gameObject.tag == "Jump Block") {
+            jumpSound.Play();
             cubeRb2d.velocity = new Vector2(cubeRb2d.velocity.x, 10);
         }
     }
