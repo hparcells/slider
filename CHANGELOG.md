@@ -11,6 +11,10 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## Changes
 - Key hitbox changed, so no more wierd looking key grab.
+- Shifted Level 9 to the left.
+
+## Known Bugs
+- Resetting a level, almost as soon as the level starts, the player will not spawn.
 
 # 0.3.0 [12/7/2018]
 ## Additions
@@ -19,6 +23,9 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Force reset. Press left and right at same time.
 - Ending screen, displaying death count.
 - My own spash screen.
+
+## Known Bugs
+- Resetting a level, almost as soon as the level starts, the player will not spawn.
 
 # 0.2.0 [12/03/2018]
 ## Additions
