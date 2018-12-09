@@ -15,14 +15,16 @@ public class PlayerController : MonoBehaviour {
 
     private float move;
     private bool canMove;
-    private bool hasKey = false;
-    private bool shouldDeath = false;
+    private bool hasKey;
+    private bool shouldDeath;
+    private bool shouldRemoveParticles;
 
     void Start () {
         playerRb2d = GetComponent<Rigidbody2D>();
         canMove = true;
         playerRb2d.isKinematic = false;
         shouldDeath = true;
+        shouldRemoveParticles = true;
     }
 
     private void Update() {
@@ -39,6 +41,7 @@ public class PlayerController : MonoBehaviour {
         if(Input.GetKey(KeyCode.LeftArrow) && Input.GetKey(KeyCode.RightArrow)) {
             deathSound.Play();
             removeParticlesFromParent();
+            shouldRemoveParticles = false;
             Destroy(gameObject);
         }
     }
@@ -94,6 +97,7 @@ public class PlayerController : MonoBehaviour {
         if(collision.gameObject.tag == "Enemy") {
             deathSound.Play();
             removeParticlesFromParent();
+            shouldRemoveParticles = false;
             Destroy(gameObject);
         }
     }
@@ -104,7 +108,10 @@ public class PlayerController : MonoBehaviour {
             Debug.Log("Deaths: " + ++deaths);
             deathSound.Play();
 
-            removeParticlesFromParent();
+            if(shouldRemoveParticles) {
+                removeParticlesFromParent();
+            }
+
             resetLevel();
         }
     }

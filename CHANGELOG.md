@@ -9,7 +9,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Sound when grabbing key.
 - Jump sound for moveable cubes.
 - Player emits a trail when moving.
-- Portal emits particles.
+- Portals emits particles.
 - Player emits particles on death.
 
 ## Changes
