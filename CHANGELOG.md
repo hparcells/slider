@@ -4,7 +4,7 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
-# Unreleased [12/8/2018]
+# Unreleased [12/09/2018]
 ## Additions
 - Sound when grabbing key.
 - Jump sound for moveable cubes.
@@ -13,10 +13,13 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Key hitbox changed, so no more wierd looking key grab.
 - Shifted Level 9 to the left.
 
+## Fixes
+- Fixed not counting deaths correctly.
+
 ## Known Bugs
 - Resetting a level, almost as soon as the level starts, the player will not spawn.
 
-# 0.3.0 [12/7/2018]
+# 0.3.0 [12/07/2018]
 ## Additions
 - Keys and Locked Portals which require keys to open.
 - Movable cubes.
@@ -26,6 +29,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## Known Bugs
 - Resetting a level, almost as soon as the level starts, the player will not spawn.
+- Does not count deaths correctly.
 
 # 0.2.0 [12/03/2018]
 ## Additions

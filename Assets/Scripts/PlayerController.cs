@@ -15,11 +15,13 @@ public class PlayerController : MonoBehaviour {
     private float move;
     private bool canMove;
     private bool hasKey = false;
+    private bool shouldDeath = false;
 
     void Start () {
         playerRb2d = GetComponent<Rigidbody2D>();
         canMove = true;
         playerRb2d.isKinematic = false;
+        shouldDeath = true;
     }
 
     private void Update() {
@@ -53,6 +55,8 @@ public class PlayerController : MonoBehaviour {
                 currentLevel = 1;
                 Initiate.Fade("Ending", Color.white, 5);
             }
+
+            shouldDeath = false;
         }
 
         // Locked Portal collision.
@@ -66,6 +70,8 @@ public class PlayerController : MonoBehaviour {
                 currentLevel = 1;
                 Initiate.Fade("Ending", Color.white, 5);
             }
+
+            shouldDeath = false;
         }
 
         // Key collision
@@ -90,9 +96,11 @@ public class PlayerController : MonoBehaviour {
     }
 
     void OnBecameInvisible() {
-        deaths++;
-        resetLevel();
-        deathSound.Play();
+        if(shouldDeath) {
+            Debug.Log("Deaths: " + ++deaths);
+            deathSound.Play();
+            resetLevel();
+        }
     }
 
     private void resetLevel() {
