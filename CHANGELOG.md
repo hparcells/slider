@@ -8,6 +8,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ## Additions
 - Sound when grabbing key.
 - Jump sound for moveable cubes.
+- Player trail.
 
 ## Changes
 - Key hitbox changed, so no more wierd looking key grab.
