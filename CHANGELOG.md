@@ -4,13 +4,14 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
-# Unreleased [12/09/2018]
+# 0.4.0 [12/09/2018]
 ## Additions
 - Sound when grabbing key.
 - Jump sound for moveable cubes.
 - Player emits a trail when moving.
 - Portals emits particles.
 - Player emits particles on death.
+- Version label at top of menu.
 
 ## Changes
 - Key hitbox changed, so no more wierd looking key grab.
