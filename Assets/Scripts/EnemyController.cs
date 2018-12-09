@@ -25,7 +25,7 @@ public class EnemyController : MonoBehaviour {
         }
 
         // Jump block action.
-        if(collision.gameObject.tag == "Jump Block") {jumpSound.Play();
+        if(collision.gameObject.tag == "Jump Block") {
             jumpSound.Play();
             enemyRb2d.velocity = new Vector2(enemyRb2d.velocity.y, 10);
         }

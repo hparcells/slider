@@ -51,7 +51,7 @@ public class PlayerController : MonoBehaviour {
 
             if(Application.CanStreamedLevelBeLoaded("Level" + ++currentLevel)) {
                 Initiate.Fade("Level" + currentLevel, Color.white, 5);
-            } else {
+            }else {
                 currentLevel = 1;
                 Initiate.Fade("Ending", Color.white, 5);
             }
@@ -97,6 +97,7 @@ public class PlayerController : MonoBehaviour {
 
     void OnBecameInvisible() {
         if(shouldDeath) {
+            shouldDeath = false;
             Debug.Log("Deaths: " + ++deaths);
             deathSound.Play();
             resetLevel();
