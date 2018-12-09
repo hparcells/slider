@@ -8,6 +8,7 @@ public class PlayerController : MonoBehaviour {
     public AudioSource deathSound;
     public AudioSource jumpSound;
     public AudioSource keySound;
+    public ParticleSystem deathParticles;
 
     public static int currentLevel = 1;
     public static int deaths = 0;
@@ -37,6 +38,7 @@ public class PlayerController : MonoBehaviour {
         // Force reset.
         if(Input.GetKey(KeyCode.LeftArrow) && Input.GetKey(KeyCode.RightArrow)) {
             deathSound.Play();
+            removeParticlesFromParent();
             Destroy(gameObject);
         }
     }
@@ -91,6 +93,7 @@ public class PlayerController : MonoBehaviour {
         // Death from enemy.
         if(collision.gameObject.tag == "Enemy") {
             deathSound.Play();
+            removeParticlesFromParent();
             Destroy(gameObject);
         }
     }
@@ -100,6 +103,8 @@ public class PlayerController : MonoBehaviour {
             shouldDeath = false;
             Debug.Log("Deaths: " + ++deaths);
             deathSound.Play();
+
+            removeParticlesFromParent();
             resetLevel();
         }
     }
@@ -112,5 +117,11 @@ public class PlayerController : MonoBehaviour {
         canMove = false;
         playerRb2d.isKinematic = true;
         playerRb2d.velocity = new Vector2(0, 0);
+    }
+
+    private void removeParticlesFromParent() {
+        deathParticles.Play();
+        var deathParticlesAsChild = gameObject.transform.GetChild(0);
+        deathParticlesAsChild.transform.parent = null;
     }
 }
