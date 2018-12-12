@@ -37,7 +37,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1889133886666496}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -6.96, y: 5.13, z: -0.12890625}
+  m_LocalPosition: {x: -4.473, y: 2.7298002, z: -0.12890625}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -99,6 +99,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 699644e4a133f7344875adfbbbac722f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  cubeRb2d: {fileID: 50098103696494260}
+  jumpSound: {fileID: 0}
 --- !u!212 &212557972671868646
 SpriteRenderer:
   m_ObjectHideFlags: 1
