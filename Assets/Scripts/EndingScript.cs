@@ -11,7 +11,7 @@ public class EndingScript : MonoBehaviour {
     private bool shouldDoAction = true;
 
     void Start () {
-        if(PlayerController.completionTime < PlayerPrefs.GetFloat("bestTime") || Constants.version != PlayerPrefs.GetString("version")) {
+        if(PlayerController.completionTime < PlayerPrefs.GetFloat("bestTime") || Constants.version != PlayerPrefs.GetString("version") || !PlayerPrefs.HasKey("bestTime")) {
             PlayerPrefs.SetFloat("bestTime", PlayerController.completionTime);
             PlayerPrefs.SetString("version", Constants.version);
             PlayerPrefs.Save();
