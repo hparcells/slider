@@ -12,6 +12,7 @@ public class PlayerController : MonoBehaviour {
 
     public static int currentLevel = 1;
     public static int deaths = 0;
+    public static float completionTime = 0.0f;
 
     private float move;
     private bool canMove;
@@ -29,6 +30,7 @@ public class PlayerController : MonoBehaviour {
 
     private void Update() {
         playerRb2d.transform.rotation = Quaternion.identity;
+        completionTime += Time.deltaTime;
     }
 
     void FixedUpdate() {
