@@ -3,6 +3,9 @@
 public class EnemyController : MonoBehaviour {
     public Rigidbody2D enemyRb2d;
     public AudioSource jumpSound;
+    public AudioSource keySound;
+
+    private bool hasKey = false;
 
     private int move = -1;
 
@@ -33,6 +36,14 @@ public class EnemyController : MonoBehaviour {
         // Go away.
         if(collision.gameObject.name == "Portal") {
             Destroy(gameObject);
+        }
+
+        // Key collision
+        if(collision.gameObject.name == "Key") {
+            collision.collider.enabled = false;
+            collision.gameObject.transform.parent = gameObject.transform;
+            keySound.Play();
+            hasKey = true;
         }
     }
 

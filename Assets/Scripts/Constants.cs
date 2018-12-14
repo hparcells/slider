@@ -1,7 +1,5 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 
 public class Constants : MonoBehaviour {
-    public static readonly string version = "0.5.0";
+    public static readonly string version = "1.0.0";
 }
